@@ -5,39 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
-  <title>Puffer</title>
+  <title>Test player</title>
   <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
 <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
   <link rel="icon" href="">
   <style type="text/css">
-    body {
-      background: #000;
-      overflow: hidden;
-    }
-    nav {
-      display: none !important;
-    }
-    button[data-target="#debug-info"] {
-      opacity: 0;
-    }
-    #channel-list {
-      opacity: 0;
-    }
-    .embed-responsive {
-      overflow: initial;
-    }
-    #tv-video {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100vw;
-      height: 100vh;
-      positon: fixed;
-    }
-    #tv-controls {
-      opacity: 0 !important;
-    }
+ 
   </style>
 </head>
 
@@ -48,15 +21,19 @@
     <div class="row">
        
 
-
+      <div class="col-6">
+      </div>
  
-
-
+      <div class="col-3">
+       
+ 
     <video
     id="my-player"
     class="video-js"
     controls
     preload="auto"
+    width="400"
+    height="264"
     poster="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg"
     data-setup='{}'>
   <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"  type="video/mp4"></source>
@@ -70,6 +47,7 @@
     </a>
   </p>
 </video>
+</div>
 
 </div>
      
@@ -80,6 +58,7 @@
 
   <script type="text/javascript">
     var player = videojs('my-player');
+    player.aspectRatio('1:1');
    
   </script>
  
